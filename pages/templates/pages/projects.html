@@ -1,0 +1,32 @@
+<div id="projects" class='mydiv'>
+    <div class='up' href='header'>^</div>
+    {#        <p>My Work</p>#}
+    {#    <div class="slideShow">#}
+    {#        <img class="mySlides w3-animate-right" src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg" style="width:100%">#}
+    {#        <img class="mySlides w3-animate-right" src="https://www.w3schools.com/css/trolltunga.jpg" style="width:100%">#}
+    {##}
+    {#        <div id="ssButtonBox">#}
+    {#            <button class="slideShowButton" id="ssLeft" onclick="plusDivs(-1)">&#10094;</button>#}
+    {#            <button class="slideShowButton" id="ssRight" onclick="plusDivs(1)">&#10095;</button>#}
+    {#        </div>#}
+    {#    </div>#}
+    <div id="projBox">
+
+
+        <div id="earthquake" class="projWrap">
+            <a class="projLinks" href="{% url 'earthquakeMap' %}">earthquake map</a>
+        </div>
+        <div id="weatherApp" class="projWrap">
+            <a class="projLinks" href="{% url 'weather_index' %}">weather app</a>
+        </div>
+        <div id="angryDice" class="projWrap">
+            <a class="projLinks" href="{% url 'angryDice' %}">angry dice</a>
+        </div>
+    </div>
+
+    <div class="navButtons"><a class='button' id="leftButton" href="#intro">welcome</a><a class='button'
+                                                                                          id="rightButton"
+                                                                                          href="#contact">contact</a>
+
+    </div>
+</div>

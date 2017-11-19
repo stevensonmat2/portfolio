@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'pages/css/weather_style.css' %}">
+</head>
+<body>
+
+<section>
+
+<div class="container">
+    <br>
+    <div id="city"></div>
+    <br>
+    <div id="temp"></div>
+    <br>
+    <div id="weather"></div>
+   <br>
+    <div id="icon"></div>
+    <!--<br>-->
+    <form class="textbox">
+        <input id="cityChoice" placeholder="city or zip">
+        <input id="submit" type="submit" value="Submit">
+    </form>
+    <br>
+    <!--<button id="myLoc">my location</button>-->
+    <div id="myLoc">my location</div>
+    <br>
+<!-- Rounded switch -->
+<label class="switch">
+
+  <input id="toggle" type="checkbox" name="toggle">
+  <span class="slider round"></span>
+</label>
+    <p>°F or °C </p>
+
+</div>
+</section>
+</body>
+<a href="{% url 'index' %}#projects">back to projects</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'pages/js/weather_main.js' %}"></script>
+</html>

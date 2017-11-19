@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'pages/css/portfolio_style_sheet.css' %}">
+
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+</head>
+{#<body>#}
+{#<header>#}
+{#  <h1>MATT STEVENSON</h1>#}
+{##}
+{#  <a class='button other' href="#intro">welcome</a>#}
+{##}
+{#  </header>#}
+{##}
+{#  <div id="intro" class='mydiv'>#}
+{#      <a class='up' href='header'>^</a>#}
+{#    <font id="serifada2">hello.<br><br> my name is matt stevenson.<br><br> i'm a programmer, musician, and artist.<br><br>#}
+{#        simplicty and expression are the core elements that inform my work.<br></font>#}
+{#      <ul class="projButt">#}
+{#    </ul>#}
+{##}
+{#    <div><a class='button' href="#contact">contact</a>#}
+{#    <a id='proj' class='button' href="#projects">projects</a></div>#}
+{##}
+{##}
+{#    </div>#}
+{##}
+{##}
+{##}
+{#  <div id="projects" class='mydiv'>#}
+{#      <a class='up' href='header'>^</a>#}
+{#    <font id="serifada2">projects</font>#}
+{##}
+{##}
+{#    <ul class="projButt">#}
+{#    </ul>#}
+{#    <div><a class='button' href="#intro">welcome</a><a class='button' href="#contact">contact</a>#}
+{##}
+{#    </div>#}
+{#    </div>#}
+{##}
+{##}
+{#  <div id="contact" class='mydiv'>#}
+{#      <a class='up' href='header'>^</a>#}
+{#    <font id="serifada2">contact</font>#}
+{#      <ul class="projButt">#}
+{#    </ul>#}
+{#    <div><a class='button' href="#projects">projects</a><a class='button' href="#intro">welcome</a></div>#}
+{#    </div>#}
+
+{% include "pages/splash.html" %}
+
+{% include "pages/welcome.html" %}
+
+{% include "pages/projects.html" %}
+
+{% include "pages/contact.html" %}
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'pages/js/javascripts.js' %}"></script>
+</html>

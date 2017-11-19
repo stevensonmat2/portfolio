@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'pages/css/earthquakeCSS.css' %}">
+    <script src="https://openlayers.org/en/v4.4.1/build/ol.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+</body>
+
+<div id="map" style="width: 100%, height: 100px"></div>
+<div id="popupBox">
+    <div class="tpAll" id="tp1"></div>
+
+    <div class="tpAll" id="tp2"></div>
+
+    <div class="tpAll" id="tp3"></div>
+
+    <div class="tpAll" id="tp4"></div>
+</div>
+<a id="backToProj" href="{% url 'index' %}#projects">back to projects</a>
+<div class="footer">
+    <div id="spacer">magnitude filter</div>
+    <div id="colorBox">
+        <input id="intensity" type="range" min="0" max="400.5" step="44.5" value="0" class="slider" id="myRange">
+        <div class="colorBoxes" id="box1">1</div>
+        <div class="colorBoxes" id="box2">2</div>
+        <div class="colorBoxes" id="box3">3</div>
+        <div class="colorBoxes" id="box4">4</div>
+        <div class="colorBoxes" id="box5">5</div>
+        <div class="colorBoxes" id="box6">6</div>
+        <div class="colorBoxes" id="box7">7</div>
+        <div class="colorBoxes" id="box8">8</div>
+        <div class="colorBoxes" id="box9">9</div>
+        <div class="colorBoxes" id="box10">10</div>
+
+</div>
+    <form>
+      <label>radius size</label>
+{#      <input id="distance" type="range" min="1" max="10" step="0.5" value="5" />#}
+      <input id="distance" type="range" min="1" max="20" step="1" value="10" />
+    </form>
+
+    </div>
+
+<script>
+
+
+
+</script>
+<script src="site.js"></script>
+<script src="{% static 'pages/js/earthquakeJS.js' %}"></script>
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angery Dice</title>
+
+    <link rel="stylesheet" href="{% static 'pages/css/angryDiceCSS.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <h1>Angery Dice</h1>
+        <div id="images">
+            <!--<img id="mainPic" src="https://pbs.twimg.com/profile_images/848471660860538880/pevXVsIp.jpg">-->
+            <button id="myBtn">Rules</button>
+            <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Rules:</p>
+      <p>Each game consists of three rounds. To progress, each players need a certain combination of dice</p>
+      <p>To pass Round One, a player needs a 1 and a 2; for Round Two, a 3 and 4; for Round 3, a 5 and 6</p>
+      <p>If a player rolls two 3's, they are sent back to Round One</p>
+      <p>Each time a player rolls a double, they fill the corresponding spot on their DoubleStrike column</p>
+      <p>If a player has every DoubleStrike filled, they may use the DoubleStrike ability to send their opponent back to Round One</p>
+  </div>
+
+</div>
+        </div>
+
+    </div>
+    <div class="roundDisplay">
+        <div id="playerRound">Human Player</div>
+        <div id="compRound">Computer Player</div>
+    </div>
+    <div id="diceArea">
+        <div id="playerDbls">
+            <button class="plDblCounter" id="6" value="6">6</button>
+            <button class="plDblCounter" id="5" value="5">5</button>
+            <button class="plDblCounter" id="4" value="4">4</button>
+            <button class="plDblCounter" id="3" value="3">3</button>
+            <button class="plDblCounter" id="2" value="2">2</button>
+            <button class="plDblCounter" id="1" value="1">1</button>
+            <button class="playerDS">DoubleStrike</button>
+            </div>
+    <div class="content">
+
+        <div id="one">
+            <div class="playerDice" id="die1">
+                 <img src="{% static 'pages/img/3.png' %}" alt="die 1">
+            </div>
+            <button class="holdP btn btn--stripe btn--radius" id="hold1" value="hold">Hold</button>
+        </div>
+
+
+        <div id="two">
+            <div class="playerDice" id="die2">
+                <img src="{% static 'pages/img/3.png' %}" alt="die 2">
+            </div>
+            <button class="holdP btn btn--stripe btn--radius" id="hold2" value="hold">Hold</button>
+        </div>
+
+    </div>
+     <div class="content">
+        <div id="one">
+            <div class="compDice" id="die3">
+                <img src="{% static 'pages/img/3.png' %}" alt="die 3">
+            </div>
+            <button class="hold btn btn--stripe btn--radius" id="hold3" value="hold">Hold</button>
+        </div>
+
+
+        <div id="two">
+            <div class="compDice" id="die4">
+                <img src="{% static 'pages/img/3.png' %}" alt="die 4">
+            </div>
+            <button class="hold btn btn--stripe btn--radius" id="hold4" value="hold">Hold</button>
+        </div>
+
+    </div>
+        <div id="compDbls">
+            <button class="plDblCounter" id="c6" value="6">6</button>
+            <button class="plDblCounter" id="c5" value="5">5</button>
+            <button class="plDblCounter" id="c4" value="4">4</button>
+            <button class="plDblCounter" id="c3" value="3">3</button>
+            <button class="plDblCounter" id="c2" value="2">2</button>
+            <button class="plDblCounter" id="c1" value="1">1</button>
+            <button>DoubleStrike</button>
+        </div>
+
+        </div>
+
+    <div class="content spacer">
+        <button class="btn btn--stripe" id="roll">Start</button>
+    </div>
+    <div id="myProgress">
+        <div id="statBar">computer turn</div>
+  <div id="myBar"></div>
+
+</div>
+</div>
+
+<a href="{% url 'index' %}#projects">back to projects</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'pages/js/angryDiceJS.js' %}"></script>
+</body>
+</html>
